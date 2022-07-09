@@ -1,0 +1,326 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\web\\web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj",
+        "projectName": "domain",
+        "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj",
+        "packagesPath": "C:\\Users\\Viktor Meglenovski\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Viktor Meglenovski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj",
+        "projectName": "repository",
+        "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj",
+        "packagesPath": "C:\\Users\\Viktor Meglenovski\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Viktor Meglenovski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\service.csproj",
+        "projectName": "service",
+        "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\service.csproj",
+        "packagesPath": "C:\\Users\\Viktor Meglenovski\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Viktor Meglenovski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj"
+              },
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\web\\web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\web\\web.csproj",
+        "projectName": "web",
+        "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\web\\web.csproj",
+        "packagesPath": "C:\\Users\\Viktor Meglenovski\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Viktor Meglenovski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\domain\\domain.csproj"
+              },
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\repository\\repository.csproj"
+              },
+              "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\service.csproj": {
+                "projectPath": "C:\\Users\\Viktor Meglenovski\\Desktop\\HW1_IS_191001\\HW1_IS_191001\\service\\service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.96.0, )"
+            },
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "GemBox.Document": {
+              "target": "Package",
+              "version": "[35.0.1020, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.25, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.25, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.122.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

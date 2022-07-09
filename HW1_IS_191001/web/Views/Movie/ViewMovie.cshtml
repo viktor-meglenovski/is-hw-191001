@@ -1,0 +1,90 @@
+﻿@model domain.DomainModels.Movie
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<domain.Identity.AppUser> SignInManager
+@inject UserManager<domain.Identity.AppUser> UserManager
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-4 pb-3">
+            <div class="card bg-dark" style=" height: 660px;">
+                <img class="card-img-top" src="@Model.ImageUrl" style="height: 550px;" alt="Image for product!">
+                <div class="p-1 text-white">
+                    <p class=" font-weight-bold m-0 ml-2">@Model.Name</p>
+                    <div class="row ml-2">
+                        <p class="col-6 m-0 pl-0">@Model.Category</p>
+                        <p class="col-6 m-0 pr-4 text-right">@Model.Rating/5.00</p>
+                    </div>
+                </div>
+                @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+                {
+                    <div class="row m-0 justify-content-center">
+                        <div class="col-6">
+                            <a asp-controller="Movie" asp-action="UpdateMovie" asp-route-id="@Model.Id" class="btn btn-warning text-white col-12">Edit</a>
+                        </div>
+                        <div class="col-6">
+                            <a asp-controller="Movie" asp-action="DeleteMovie" asp-route-id="@Model.Id" class="btn btn-danger col-12">Delete</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="col-8 justify-content-center">
+
+            @if (Model.Projections.Count > 0)
+            {
+                <hr />
+                <h3 class="text-center">Projections</h3>
+                <hr />
+                <table class="table table-bordered table-striped text-center">
+                    <thead>
+                    <td class="font-weight-bold">Date and Time</td>
+                    <td class="font-weight-bold">Available Tickets</td>
+                    <td class="font-weight-bold">Price per Ticket</td>
+                    <td class="font-weight-bold">Buy</td>
+                    @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+                    {
+                        <td></td>
+                        <td></td>
+                    }
+
+                    </thead>
+                    <tbody>
+                        @foreach (var p in Model.Projections)
+                        {
+                        <tr>
+                            <td>@p.DateAndTime</td>
+                            <td>@p.AvailableTickets</td>
+                            <td>@p.Price </td>
+                            <td class="justify-content-center pl-0 pr-0">
+                                <form action="/Projection/AddToCart" method="post">
+                                    <input type="hidden" name="projectionId" value="@p.Id" />
+                                    <div class="row justify-content-center">
+                                        <input type="number" min="1" name="quantity" value="0" max="@p.AvailableTickets" class="col-3" />
+                                        <button class="btn btn-success col-5 ml-1">Add to cart</button>
+                                    </div>
+
+
+                                </form>
+                            </td>
+                            @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+                            {
+                                <td><a href="/Projection/EditProjection/@p.Id" class="btn btn-block btn-warning text-white col-12">Edit</a></td>
+                                <td><a href="/Projection/DeleteProjection/@p.Id" class="btn btn-block btn-danger col-12">Delete</a></td>
+                            }
+
+
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <h3 class="text-center">There are no currently available projections for this movie! :(</h3>
+            }
+            <hr />
+            <a class="btn btn-success btn-lg btn-block col-12" href="/Projection/AddProjection/@Model.Id">Add a new projection for this movie</a>
+        </div>
+    </div>
+</div>

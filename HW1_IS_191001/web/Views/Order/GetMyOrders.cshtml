@@ -1,0 +1,33 @@
+﻿@model List<domain.DomainModels.Order> 
+<div class="container justify-content-center">
+
+    @if (Model.Count > 0)
+    {
+        <h1 class="text-center mt-2">My Orders</h1>
+        <hr />
+        <table class="table table-bordered table-striped text-center">
+            <thead>
+            <td class="font-weight-bold">#</td>
+            <td class="font-weight-bold">Order ID</td>
+            <td class="font-weight-bold">Total Price</td>
+            <td class="font-weight-bold"></td>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@(i+1)</td>
+                        <td>@Model[i].Id</td>
+                        <td>@Model[i].TotalPrice</td>
+                        <td><a href="/Order/Export/@Model[i].Id" class="btn btn-primary">Export to PDF</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2 class="text-center mt-3 text-danger">You do not have any orders yet! :(</h2>
+        <hr />
+    }
+</div>

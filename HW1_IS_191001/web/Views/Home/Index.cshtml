@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container border border-dark rounded mt-4">
+    <h1 class="text-center">Integrated Systems - Homework</h1>
+    <h2 class="text-center">Viktor Meglenovski - 191001</h2>
+    <h4 class="text-center">FINKI 2021/22</h4>
+    <hr/>
+    <p>.NET Core MVC Web Application for managing with Cinema Tickets.</p>
+    <p>The system has 2 types of users: <span class="badge-pill bg-dark text-white">Standard</span> and <span class="badge-pill bg-dark text-white">Admin</span>. When a new user is registered, they are automatically a Standard user. A standard user can become an admin by clicking on the <span class="badge-pill bg-dark text-white">Become Admin</span> link in the navigation bar above. An Admin cannot go back to being a Standard user.</p>
+    <p>The cinema contains <span class="badge-pill bg-dark text-white">Movies</span>, available on the Movies link in the navigation bar. Every authenticated user can see all available movies on that page. If the logged in user is an Admin, they can <span class="badge-pill bg-dark text-white">Add a new movie</span>, <span class="badge-pill bg-dark text-white">Edit</span> or <span class="badge-pill bg-dark text-white">Delete an existing Movie</span>. Every user can <span class="badge-pill bg-dark text-white">View the details about each movie</span>.</p>
+    <p>Each Movie has one or more available <span class="badge-pill bg-dark text-white">Projections</span> which are available on the Projections link in the navigation bar. Every authenticated user can see all available projections on that page. If the logged in user is an Admin, they can <span class="badge-pill bg-dark text-white">Add a new Projection</span>, <span class="badge-pill bg-dark text-white">Edit</span> or <span class="badge-pill bg-dark text-white">Delete an existing Projection</span>. Every user can filter the projections by date.</p>
+    <p>Each authenticated user can add tickets for the available projection to their <span class="badge-pill bg-dark text-white">Shopping Cart</span> by specifying the quantity (the number of tickets). They can buy the tickets by creating an <span class="badge-pill bg-dark text-white">Order</span> and paying the ammount needed through the Shopping Cart page.</p>
+    <p>Each authenticated user can see their previous orders on the <span class="badge-pill bg-dark text-white">My Orders</span> page and they can generate a <span class="badge-pill bg-dark text-white">PDF Report</span> about each of their previous orders.</p>
+    <p>If the logged in user is an Admin, they have access to the <span class="badge-pill bg-dark text-white">Admin Panel</span> page, where they can <span class="badge-pill bg-dark text-white">Export (all or by movie category) projetions to an Excel file</span>, and <span class="badge-pill bg-dark text-white">Import new Users from an Excel file</span>.</p>
+</div>

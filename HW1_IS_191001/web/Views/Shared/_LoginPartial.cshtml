@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<domain.Identity.AppUser> SignInManager
+@inject UserManager<domain.Identity.AppUser> UserManager
+
+<p class="d-inline mb-0 justify-content-end col-8 text-right align-content-center pt-1">
+
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="Movie" asp-action="ListAllMovies">Movies</a>
+        <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="Projection" asp-action="GetAllProjections">Projections</a>
+        <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="ShoppingCart" asp-action="">Shopping Cart</a>
+        <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="Order" asp-action="GetMyOrders">My Orders</a>
+        @if (UserManager.GetUserAsync(User).Result.Role == "User")
+        {
+            <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="Admin" asp-action="BecomeAdmin">Become Admin</a>
+        }
+        else
+        {
+            <a class="nav-link text-white mb-0 d-inline" asp-area="" asp-controller="Admin" asp-action="Index">Admin Panel</a>
+        }
+
+    <a href="#" class="nav-link text-white mb-0 d-inline" title="Manage">@User.Identity.Name</a>
+    <a class="nav-link text-white mb-0 d-inline" href="/Account/Logout">Logout</a>
+}
+else
+{
+    <a class="nav-link text-white mt-3 mb-0 d-inline" href="/Account/Register">Register</a>
+    <a class="nav-link text-white mb-0 d-inline" href="/Account/Login">Login</a>
+}
+    </p>

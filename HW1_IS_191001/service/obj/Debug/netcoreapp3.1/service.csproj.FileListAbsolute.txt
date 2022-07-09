@@ -1,0 +1,14 @@
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\service.deps.json
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\service.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\service.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.csprojAssemblyReference.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.AssemblyInfoInputs.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.AssemblyInfo.cs
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.csproj.CoreCompileInputs.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\domain.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\repository.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\domain.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\bin\Debug\netcoreapp3.1\repository.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\service\obj\Debug\netcoreapp3.1\service.csproj.CopyComplete

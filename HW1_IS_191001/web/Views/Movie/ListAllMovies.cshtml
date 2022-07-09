@@ -1,0 +1,54 @@
+﻿@model List<domain.DomainModels.Movie>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<domain.Identity.AppUser> SignInManager
+@inject UserManager<domain.Identity.AppUser> UserManager
+<div class="container-fluid justify-content-center">
+    @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+    {
+        <a class="btn btn-success btn-lg mt-2 btn-block col-12" asp-action="CreateNewMovie">Create a new movie</a>
+    }
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var item = Model[i];
+
+        if (i % 4 == 0)
+        {
+            @:<div class="row justify-content-start mt-2">
+            }
+
+            <div class="col-3 pb-3">
+                <div class="card bg-dark" style=" height: 510px;">
+                    <img class="card-img-top" src="@item.ImageUrl" style="height: 400px;" alt="Image for product!">
+                    <div class="p-1 text-white">
+                        <p class=" font-weight-bold m-0 ml-2">@item.Name</p>
+                        <div class="row ml-2">
+                            <p class="col-6 m-0 pl-0">@item.Category</p>
+                            <p class="col-5 m-0 mr-1 text-right">@item.Rating/5.00</p>
+                        </div>
+                    </div>
+                    <div class="row m-0 justify-content-center">
+                        <a asp-controller="Movie" asp-action="ViewMovie" asp-route-id="@item.Id" class="btn btn-primary col-3 m-1">View</a>
+                        @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+                        {
+                            <a asp-controller="Movie" asp-action="UpdateMovie" asp-route-id="@item.Id" class="btn btn-warning text-white col-3 m-1">Edit</a>
+                            <a asp-controller="Movie" asp-action="DeleteMovie" asp-route-id="@item.Id" class="btn btn-danger col-3 m-1">Delete</a>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+
+            if (i % 4 == 3)
+            {
+            @:</div>
+        }
+    }
+
+</div>

@@ -1,0 +1,98 @@
+﻿@model List<domain.DomainModels.Projection>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<domain.Identity.AppUser> SignInManager
+@inject UserManager<domain.Identity.AppUser> UserManager
+<div class="container-fluid justify-content-center">
+
+    @if (Model.Count > 0)
+    {
+
+
+        <h1 class="text-center mt-2">Projections</h1>
+        <hr />
+        <div class="col-6 mb-2">
+            <h3>Filter projections by date:</h3>
+            <form method="get" action="/Projection/GetAllProjectionsByDate">
+                <div class="row">
+                    @if (ViewBag.date != null)
+                    {
+                        <input class="form-control col-5 mr-2 ml-3" type="date" name="date" id="date" value="@ViewBag.Date" />
+                    }
+                    else
+                    {
+                        <input class="form-control col-5 mr-2 ml-3" type="date" name="date" id="date" />
+                    }
+
+                    <button type="submit" class="btn btn-success col-3">Filter</button>
+                </div>
+            </form>
+        </div>
+
+        <table class="table table-bordered table-striped text-center">
+            <thead>
+            <td class="font-weight-bold">Movie</td>
+            <td class="font-weight-bold">Cover</td>
+            <td class="font-weight-bold">Date and Time</td>
+            <td class="font-weight-bold">Available Tickets</td>
+            <td class="font-weight-bold">Price per Ticket</td>
+            <td class="font-weight-bold">Buy</td>
+            @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+            {
+                <td></td>
+                <td></td>
+            }
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                <tr>
+                    <td class="align-middle"><a href="/Movie/ViewMovie/@p.Movie.Id" class="text-dark">@p.Movie.Name</a></td>
+                    <td class="align-middle"><img src="@p.Movie.ImageUrl" style="height:100px;" /></td>
+                    <td class="align-middle">@p.DateAndTime</td>
+                    <td class="align-middle">@p.AvailableTickets</td>
+                    <td class="align-middle">@p.Price </td>
+                    <td class="justify-content-center pl-0 pr-0 align-middle">
+                        <form action="/Projection/AddToCart" method="post">
+                            <input type="hidden" name="projectionId" value="@p.Id" />
+                            <div class="row justify-content-center">
+                                <input type="number" min="1" name="quantity" value="0" max="@p.AvailableTickets" class="col-3" />
+                                <button class="btn btn-success col-5 ml-1">Add to cart</button>
+                            </div>
+                        </form>
+                    </td>
+
+                    @if (UserManager.GetUserAsync(User).Result.Role == "Admin")
+                    {
+                        <td class="align-middle"><a href="/Projection/EditProjection/@p.Id" class="btn btn-block btn-warning text-white col-12">Edit</a></td>
+                        <td class="align-middle"><a href="/Projection/DeleteProjection/@p.Id" class="btn btn-block btn-danger col-12">Delete</a></td>
+                    }
+
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h2 class="text-center mt-3 text-danger">There are no currently available projections! :(</h2>
+        <hr />
+        <div class="col-6 mb-2">
+            <h3>Filter projections by date:</h3>
+            <form method="get" action="/Projection/GetAllProjectionsByDate">
+                <div class="row">
+                    @if (ViewBag.date != null)
+                    {
+                        <input class="form-control col-5 mr-2 ml-3" type="date" name="date" id="date" required="required" value="@ViewBag.Date" />
+                    }
+                    else
+                    {
+                        <input class="form-control col-5 mr-2 ml-3" type="date" name="date" id="date" required="required" />
+                    }
+
+                    <button type="submit" class="btn btn-success col-3">Filter</button>
+                </div>
+            </form>
+        </div>
+    }
+</div>

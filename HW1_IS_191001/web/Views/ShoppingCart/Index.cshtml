@@ -1,0 +1,77 @@
+﻿@using Microsoft.Extensions.Options
+@inject IOptions<domain.StripeSettings> Stripe
+@model domain.DTO.ShoppingCartDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid justify-content-center">
+
+    @if (Model.ProjectionsInShoppingCarts.Count == 0)
+    {
+        <hr />
+        <h1 class="text-center">Your Shopping Cart is empty!</h1>
+        <hr />
+        <a href="/Projection/GetAllProjections" class="btn btn-success btn-lg btn-block text-white">Start by buying some tickets for the upcoming projections</a>
+    }
+    else
+    {
+        <h1 class="m-2 text-center">Shopping Cart</h1>
+        <hr />
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Date and Time</th>
+                    <th scope="col">Number of tickets</th>
+                    <th scope="col">Price per ticket</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @for (int i = 0; i < Model.ProjectionsInShoppingCarts.Count; i++)
+                {
+                    var item = Model.ProjectionsInShoppingCarts[i];
+
+                    <tr>
+                        <th scope="row">@(i + 1)</th>
+                        <td>@item.Projection.Movie.Name</td>
+                        <td>@item.Projection.DateAndTime</td>
+                        <td>@item.NumberOfTickets</td>
+                        <td>$@item.Projection.Price</td>
+                        <td><a asp-controller="ShoppingCart" asp-action="DeleteFromShoppingCart" asp-route-id="@item.Projection.Id" class="btn btn-danger">Delete From Shopping Cart</a></td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot class="thead-dark">
+                <tr>
+                    <th scope="col">TotalPrice:</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">
+                       
+                    </th>
+                    <th scope="col" class="text-right">
+                        <form asp-controller="ShoppingCart" asp-action="PayOrder" method="post">
+                            <article>
+                                <script src="https://checkout.stripe.com/checkout.js"
+                                        class="stripe-button"
+                                        data-key="@Stripe.Value.PublishableKey"
+                                        data-locale="auto"
+                                        data-description="IS HW 191001 Cinema Payment"
+                                        data-amount="@(Model.TotalPrice * 100)"
+                                        data-label="Pay $@Model.TotalPrice">
+                                </script>
+                            </article>
+                        </form>
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    }
+
+</div>

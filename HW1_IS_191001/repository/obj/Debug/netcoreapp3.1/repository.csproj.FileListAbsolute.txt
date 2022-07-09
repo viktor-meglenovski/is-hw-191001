@@ -1,0 +1,12 @@
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\bin\Debug\netcoreapp3.1\repository.deps.json
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\bin\Debug\netcoreapp3.1\repository.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\bin\Debug\netcoreapp3.1\repository.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\bin\Debug\netcoreapp3.1\domain.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\bin\Debug\netcoreapp3.1\domain.pdb
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.csprojAssemblyReference.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.AssemblyInfoInputs.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.AssemblyInfo.cs
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.csproj.CoreCompileInputs.cache
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.csproj.CopyComplete
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.dll
+C:\Users\Viktor Meglenovski\Desktop\HW1_IS_191001\HW1_IS_191001\repository\obj\Debug\netcoreapp3.1\repository.pdb
